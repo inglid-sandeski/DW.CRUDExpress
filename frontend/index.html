@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PRODUTOS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+
+    <h1>PRODUTOS DO BACKEND</h1>
+
+    <!-- FILTROS -->
+    <div id="filtros">
+
+        <h2>Filtros de Pesquisa</h2>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Pesquisar por nome"
+        >
+
+        <select id="status">
+            <option value="">Todos os Status</option>
+            <option value="disponivel">Disponível</option>
+            <option value="emprestado">Emprestado</option>
+            <option value="manutencao">Manutenção</option>
+        </select>
+
+        <select id="tipo">
+            <option value="">Todos os Tipos</option>
+            <option value="notebook">Notebook</option>
+            <option value="projetor">Projetor</option>
+            <option value="console">Console</option>
+            <option value="headset">Headset</option>
+            <option value="mouse">Mouse</option>
+            <option value="teclado">Teclado</option>
+            <option value="monitor">Monitor</option>
+            <option value="webcam">Webcam</option>
+            <option value="microfone">Microfone</option>
+        </select>
+
+        <button onclick="getProducts()">
+            Filtrar
+        </button>
+
+        <button onclick="clearFilters()">
+            Limpar Filtros
+        </button>
+
+    </div>
+
+    <!-- TABELA -->
+    <div id="produtos">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="data">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div id="cadastro">
+
+        <h2>Cadastro / Edição de Produto</h2>
+
+        <input
+            type="hidden"
+            id="idProduto"
+        >
+
+        <input
+            type="text"
+            id="nomeProduto"
+            placeholder="Nome do produto"
+        >
+
+        <input
+            type="text"
+            id="tipoProduto"
+            placeholder="Tipo do produto"
+        >
+
+        <select id="statusProduto">
+            <option value="disponivel">Disponível</option>
+            <option value="emprestado">Emprestado</option>
+            <option value="manutencao">Manutenção</option>
+        </select>
+
+        <input
+            type="text"
+            id="descricaoProduto"
+            placeholder="Descrição"
+        >
+
+        <br><br>
+
+        <button onclick="salvarProduto()">
+            Cadastrar
+        </button>
+
+        <button onclick="atualizarProduto()">
+            Atualizar
+        </button>
+
+        <button onclick="limparFormulario()">
+            Limpar
+        </button>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

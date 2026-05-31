@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Título */
+h1{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #005bea, #00c6fb);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Containers */
+#filtros,
+#cadastro,
+#produtos{
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Subtítulos */
+h2{
+    margin-bottom: 15px;
+    color: #00c6fb;
+}
+
+/* Campos */
+input,
+select{
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #3a3a3a;
+    color: white;
+    min-width: 180px;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    border-color: #00c6fb;
+    box-shadow: 0 0 5px #00c6fb;
+}
+
+/* Botões */
+button{
+    padding: 12px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #005bea;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #0077ff;
+    transform: translateY(-2px);
+}
+
+/* Tabela */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+thead{
+    background-color: #005bea;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+    color: white;
+}
+
+td{
+    padding: 12px;
+    border-bottom: 1px solid #444;
+}
+
+tbody tr{
+    background-color: #333;
+}
+
+tbody tr:nth-child(even){
+    background-color: #3d3d3d;
+}
+
+tbody tr:hover{
+    background-color: #4a4a4a;
+}
+
+/* Botões da tabela */
+td button{
+    padding: 8px 12px;
+    margin-right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px){
+
+    input,
+    select,
+    button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+}
